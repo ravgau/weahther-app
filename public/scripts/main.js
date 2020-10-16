@@ -20,9 +20,9 @@ let weekView = document.querySelector("section.week-view")
     "clear-day":"./img/sun.svg",
     "clear-night":"./img/moon.svg",
     "rain":"./img/rain.svg",
-    "snow":"./img/Snow.svg",
+    "snow":"./img/snow.svg",
     "wind":"./img/wind.svg",
-    "cloudy":"./img/cloud.svg",
+    "cloudy":"./img/clouds.svg",
     'partly-cloudy-day' : "./img/cloudy-day.svg",
     'partly-cloudy-night': "./img/cloudy-night.svg",
     'fallback': './img/fallback.png'
