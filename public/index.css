@@ -1,0 +1,218 @@
+html{
+    box-sizing: border-box;
+    font-size: calc(12px + 1vw);
+}
+html *{
+    box-sizing: inherit;
+}
+body{
+    font-family: monospace;
+    margin: 0;
+    padding: 0;
+    background-color: hsl(227, 47%, 96%);
+}
+ul,li{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+header{
+    display: flex;
+    justify-content: flex-start;
+    padding: 0.2em .4em;
+    align-items: center;
+    margin: 0;
+    color: white;
+    background-color: hsl(217, 19%, 35%);
+    position: relative;
+}
+header h1{
+    font-size: 1.3rem;
+    margin: 0 .8em;;
+}
+header img{
+    height: 3em;
+    float: right;
+    margin-right: .4em;
+}
+form.special{
+    flex: 1 1 0;
+    margin: 0 0 0 1em;
+    max-width: 600px;
+    position: relative;
+}
+form.special input{
+    font-size: 1rem;
+    padding: .1em .8em;
+    width: 70%;
+    border: none;
+    border-right: none;
+    border-radius: 1em 0 0 1em;
+}
+form.special button{
+    font-size: 1rem;
+    padding: .1em .2em;
+    color: white;
+    background-color: hsl(232, 19%, 15%);
+    border-radius: 0 1em 1em 0;
+    border: none;
+    border-left: none;
+    position: absolute;
+    left: 70%;
+    width: 30%;
+    cursor: pointer;
+}
+div.main{
+    position: relative;
+}
+div.loader div::before{
+    content: " ";
+    position: absolute;
+    top: 30%;
+    left: calc(50% - 5vh);
+    height: 10vh;
+    width: 10vh;
+    background-image: linear-gradient(to bottom, hsl(217, 19%, 35%) 50%, hsl(227, 47%, 96%) 50%);
+    border-radius: 50%;
+    animation: rotate 1s;
+    animation-iteration-count: infinite;
+}
+div.loader div::after{
+    content: " ";
+    position: absolute;
+    top: calc(30% + 1vh);
+    left: calc(50% - 4vh);
+    height: 8vh;
+    width: 8vh;
+    background-color: hsl(227, 47%, 96%);
+    border-radius: 50%;
+}
+div.container{
+    display: flex;
+    justify-content: center;
+    margin: 1em auto;
+    font-size: 1rem;
+    padding: 1em 2em;
+}
+div.container img{
+    margin: .2em 1em;
+    height: 3em;
+}
+div.container div.summary{
+    text-transform: capitalize;
+    color: hsl(217, 19%, 35%);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+div.container h3{
+    color: #777777;
+    font-size: .8em;
+    margin: 0;
+    display: inline-block;
+}
+div.container h3 span{
+    font-size: 1.2em;
+    padding: .3em;
+}
+span{
+    color: rgb(0, 0, 0);
+    background-color: rgba(255, 255, 255, 0.555);
+    padding: .1em;
+    cursor: pointer;
+}
+div.data ul{
+    background-color: white;
+    color: #777777;
+    max-width: 100vw;
+    overflow: auto;
+    border-radius: .2em;
+    margin: auto;
+    display: flex;
+    padding: 0px 2px;
+    box-shadow: inset -5px 0px  5px rgb(255, 255, 255);
+}
+div.data ul li{
+    display: inline-block;
+    padding-right: 20px;
+    flex: 75px 1 0;
+    padding: 5px;
+    border-right: 1px solid wheat;
+}
+div.data ul li:last-child{
+    border: none;
+    box-shadow: inset -10px 0  0 #292828;
+}
+div.data ul li h4{
+    display: inline;
+    font-size: .6rem;
+    margin: 0 1em;
+}
+div.data ul li span{
+    font-size: 1.5rem;
+    margin-left: 0.5em;
+    background-color: transparent;
+    color:hsl(217, 19%, 35%);
+}
+section.week-view{
+    padding: 1.5em  .4em .6em;    
+}
+section.week-view h3{
+    margin : 1em;
+    text-align: center;
+    text-transform: capitalize;
+    color: tomato
+}
+div.day{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    background-color: rgb(255, 255, 255);
+    padding: .4em 1em;
+    align-items: center;
+    margin: .5em .3em;
+}
+div.day span{
+    margin: .2em .2em;
+    padding: .2em;
+    font-size: 1.2em;
+    background-color: #dbd6d677;
+}
+div.day div.summary{
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+}
+div.summary h2{
+    font-size: 1.2rem;
+}
+div.summary span{
+    text-transform: uppercase;
+    color: rgb(255, 202, 87);
+    font-size: .8em;
+}
+div.day div.summary img{ margin-right: .4em;}
+div.day h4,h3{
+    margin: .2em 1em;
+}
+div.day h4{
+    font-size: .8em;
+    color: #777777;
+
+}
+section.week-view div img{
+
+    height: 2em;
+}
+div.day div{
+    display: flex;
+    align-items: center;
+}
+@keyframes rotate{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+.hide{
+    display: none;
+}
