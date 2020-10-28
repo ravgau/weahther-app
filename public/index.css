@@ -196,6 +196,8 @@ div.day h4{
     font-size: .8em;
     color: #777777;
 
+}seaction.week-view div{
+width:fit-content;
 }
 section.week-view div img{
 
